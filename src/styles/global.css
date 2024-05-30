@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Yeseva+One&display=swap");
+
+:root {
+  --light: #f3f7f6;
+  --light-accent: #9c99ac;
+  --primary: #ff8ba7;
+  --dark-accent: #cc3d6e;
+  --dark: #613e5a;
+  --text: #222222;
+  --header: "Yeseva One", serif;
+  --body: "Josefin Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--light);
+  color: var(--text);
+}
+
+body {
+  margin: 0 auto;
+  font-family: var(--body);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page-body {
+  flex: 1;
+}
+
+h1,
+h2 {
+  font-family: var(--header);
+  font-weight: normal;
+}
+
+/* nav */
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: var(--primary);
+}
+
+.nav-links h2 {
+  color: var(--light);
+  flex: 1 1 100%;
+  text-align: center;
+}
+
+.nav-links ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  flex: 1 1 100%;
+  justify-content: center;
+  padding-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.nav-links li {
+  padding: 0 1rem;
+}
+
+.nav-links li a {
+  color: var(--light);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav-links li a:hover {
+  color: var(--dark-accent);
+}
+
+@media (min-width: 768px) {
+  .nav-links h2 {
+    flex: 0 1 auto;
+    text-align: left;
+  }
+
+  .nav-links ul {
+    flex: 0 1 auto;
+    justify-content: flex-end;
+    padding-top: 0;
+  }
+}
+
+/* footer */
+footer {
+  padding: 2rem 0;
+  text-align: center;
+  background-color: var(--dark-accent);
+}
+
+.footer-row {
+  width: 100%;
+  margin: 1% 0%;
+  padding: 0.6% 0%;
+}

@@ -1,0 +1,17 @@
+---
+const pageTitle = "About Holly";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const identity = {
+  firstName: "Holly",
+  city: "Bryan/College Station",
+  occupation: "Artist",
+};
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <p>
+    Hello! My name is {identity.firstName} and I live in {identity.city},
+    working as an {identity.occupation}.
+  </p>
+</BaseLayout>
