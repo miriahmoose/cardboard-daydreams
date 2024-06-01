@@ -1,0 +1,19 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title?: string | undefined;
+  description?: string | undefined;
+}
+
+const {
+  title = "Cardboard Daydreams",
+  description = "Web storefront for Cardboard Daydreams",
+} = Astro.props;
+---
+
+<meta charset="utf-8" />
+<meta name="description" property="og:description" content={description} />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="generator" content={Astro.generator} />
+<title>{title}</title>

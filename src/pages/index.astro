@@ -1,8 +1,88 @@
 ---
-const pageTitle = "Cardboard Daydreams";
+import ContactCTA from "../components/ContactCTA.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/Hero.astro";
+import Pill from "../components/Pill.astro";
 ---
 
-<BaseLayout pageTitle={pageTitle}>
-  <p>Holly's new siiiite.</p>
+<BaseLayout>
+  <div class="stack gap-20 lg:gap-48">
+    <header class="hero">
+      <Hero
+        title="Welcome to Cardboard Daydreams."
+        tagline="A gender-affirming traveling hair salon and art gallery."
+        align="start"
+      >
+        <div class="roles">
+          <Pill
+            ><img class="pill-icon" src="../assets/disneyland.png" />Three</Pill
+          >
+          <Pill
+            ><img
+              class="pill-icon"
+              src="../assets/pride-parade (1).png"
+            />One</Pill
+          >
+          <Pill><img class="pill-icon" src="../assets/scissor.png" />Two</Pill>
+        </div>
+      </Hero>
+      <img
+        class="profile-img"
+        alt="holly blake smiling"
+        width="519"
+        height="521"
+        src="../assets/hollyblake1.png"
+      />
+    </header>
+    <p>Holly's new siiiite.</p>
+    <ContactCTA />
+  </div>
 </BaseLayout>
+
+<style>
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .roles {
+    display: none;
+  }
+
+  .hero .profile-img {
+    aspect-ratio: 5 / 4;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 2rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .pill-icon {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.5rem;
+  }
+
+  @media (min-width: 50em) {
+    .hero {
+      display: grid;
+      grid-template-columns: 6fr 4fr;
+      padding-inline: 2rem;
+      gap: 3.5rem;
+    }
+
+    .roles {
+      margin-top: 0.5rem;
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .hero .profile-img {
+      aspect-ratio: 3 / 4;
+      border-radius: 4.5rem;
+      object-fit: cover;
+    }
+  }
+</style>
